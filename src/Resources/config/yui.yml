@@ -1,0 +1,13 @@
+system:
+    default:
+        yui:
+            modules:
+                ez-contenteditformview:
+                    requires:
+                        - 'ez-markdown-editview'
+                ez-markdown-editview:
+                    requires: ['ez-fieldeditview', 'event-valuechange', 'markdowneditview-ez-template', 'ez-translator']
+                    path: "%ez_platformui.fieldtype.markdown.public_dir%/js/views/fields/ez-markdown-editview.js"
+                markdowneditview-ez-template:
+                    type: 'template'
+                    path: "%ez_platformui.fieldtype.markdown.public_dir%/templates/fields/edit/markdown.hbt"

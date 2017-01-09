@@ -1,0 +1,49 @@
+parameters:
+    ezpublish.fieldtype.ezmarkdown.class: EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\Type
+    ezpublish.fieldtype.indexable.ezmarkdown.class: EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\SearchField
+    ezpublish.fieldtype.ezmarkdown.legacy_converter.class: EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\LegacyConverter
+    ezpublish.fieldtype.ezmarkdown.form_mapper.class: EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\FormMapper
+    ezpublish.markdown.parser.class: EzSystems\MarkdownFieldTypeBundle\TextParser\MarkdownParser
+    ezpublish.markdown.engine.class: cebe\markdown\GithubMarkdown
+    ezpublish.markdown.twig_extension.class: EzSystems\MarkdownFieldTypeBundle\Twig\MarkdownExtension
+
+services:
+    ezpublish.fieldtype.ezmarkdown:
+        class: "%ezpublish.fieldtype.ezmarkdown.class%"
+        parent: ezpublish.fieldType
+        tags:
+            - { name: ezpublish.fieldType, alias: ezmarkdown }
+
+    ezpublish.fieldtype.indexable.ezmarkdown:
+        class: "%ezpublish.fieldtype.indexable.ezmarkdown.class%"
+        tags:
+            - {name: ezpublish.fieldType.indexable, alias: ezmarkdown}
+
+    ezpublish.fieldtype.ezmarkdown.legacy_converter:
+        class: "%ezpublish.fieldtype.ezmarkdown.legacy_converter.class%"
+        tags:
+            - { name: ezpublish.storageEngine.legacy.converter, alias: ezmarkdown, lazy: true, callback: '::create' }
+
+    ezpublish.fieldtype.ezmarkdown.form_mapper:
+        class: "%ezpublish.fieldtype.ezmarkdown.form_mapper.class%"
+        tags:
+            - { name: ez.fieldFormMapper.definition, fieldType: ezmarkdown }
+            - { name: ez.fieldFormMapper.value, fieldType: ezmarkdown }
+        arguments:
+            - "@ezpublish.api.service.field_type"
+
+    ezpublish.markdown.parser:
+        class: "%ezpublish.markdown.parser.class%"
+        arguments:
+            - '@ezpublish.markdown.engine'
+
+    ezpublish.markdown.engine:
+        class: "%ezpublish.markdown.engine.class%"
+
+    ezpublish.markdown.twig_extension:
+        class: "%ezpublish.markdown.twig_extension.class%"
+        arguments:
+            - '@ezpublish.markdown.parser'
+        public: false
+        tags:
+            - { name: twig.extension }

@@ -1,0 +1,14 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="src/Tests/bootstrap.php"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         colors="false"
+>
+    <testsuites>
+        <testsuite name="EzSystems\MarkdownFieldTypeBundle">
+            <directory>src/Tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

@@ -1,0 +1,9 @@
+{% extends 'EzSystemsRepositoryFormsBundle:ContentType:field_types.html.twig' %}
+
+{% block ezmarkdown_field_definition_edit %}
+    <div class="ezmarkdown-settings text-rows{% if group_class is not empty %} {{ group_class }}{% endif %}">
+        {{- form_label(form.textRows) -}}
+        {{- form_errors(form.textRows) -}}
+        {{- form_widget(form.textRows) -}}
+    </div>
+{% endblock %}

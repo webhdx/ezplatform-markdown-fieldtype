@@ -1,0 +1,8 @@
+system:
+    default:
+        field_templates:
+            - { template: EzSystemsMarkdownFieldTypeBundle:fields:ezmarkdown.html.twig }
+        fielddefinition_settings_templates:
+            - { template: EzSystemsMarkdownFieldTypeBundle:fields:ezmarkdown_fielddefinition_settings.html.twig }
+        fielddefinition_edit_templates:
+            - { template: EzSystemsMarkdownFieldTypeBundle:fields:ezmarkdown_fielddefinition_edit.html.twig, priority: 1 }
