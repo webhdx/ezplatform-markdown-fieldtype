@@ -1,11 +1,11 @@
 {
-  "name": "ezsystems/markdown-fieldtype-bundle",
+  "name": "webhdx/markdown-fieldtype-bundle",
   "description": "eZ Platform Markdown FieldType",
   "license": "TTL-2.0",
   "authors": [
     {
-      "name": "eZ Systems",
-      "email": "dev-team@ez.no"
+      "name": "Maciej Kobus",
+      "email": "maciej@mkobus.com"
     }
   ],
   "require": {
