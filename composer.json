@@ -2,6 +2,8 @@
   "name": "webhdx/markdown-fieldtype-bundle",
   "description": "eZ Platform Markdown FieldType",
   "license": "TTL-2.0",
+  "keywords": ["ezplatform", "ezpublish", "markdown", "converter", "parser"],
+  "homepage": "https://github.com/webhdx/ezplatform-markdown-fieldtype",
   "authors": [
     {
       "name": "Maciej Kobus",
@@ -9,6 +11,7 @@
     }
   ],
   "require": {
+    "php": ">=5.3.0",
     "ezsystems/ezpublish-kernel": "^6.7",
     "cebe/markdown": "^1.1"
   },
@@ -18,11 +21,6 @@
   "autoload": {
     "psr-4": {
       "EzSystems\\MarkdownFieldTypeBundle\\": "src"
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.7.x-dev"
     }
   }
 }
