@@ -4,12 +4,12 @@
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
 
-namespace EzSystems\MarkdownFieldTypeBundle\Tests\Twig;
+namespace EzSystems\MarkdownFieldTypeBundle\Tests\Templating\Twig\Extension;
 
 use cebe\markdown\Markdown;
 use cebe\markdown\Parser as Engine;
-use EzSystems\MarkdownFieldTypeBundle\TextParser\MarkdownParser;
-use EzSystems\MarkdownFieldTypeBundle\Twig\MarkdownExtension;
+use EzSystems\MarkdownFieldType\TextParser\MarkdownParser;
+use EzSystems\MarkdownFieldTypeBundle\Templating\Twig\Extension\MarkdownExtension;
 
 class MarkdownExtensionTest extends \PHPUnit_Framework_TestCase
 {

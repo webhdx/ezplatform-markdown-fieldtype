@@ -4,7 +4,7 @@
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
 
-namespace EzSystems\MarkdownFieldTypeBundle\TextParser;
+namespace EzSystems\MarkdownFieldType\TextParser;
 
 use cebe\markdown\Parser as MarkdownEngine;
 

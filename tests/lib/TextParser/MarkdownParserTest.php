@@ -4,11 +4,11 @@
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
 
-namespace EzSystems\MarkdownFieldTypeBundle\Tests\TextParser;
+namespace EzSystems\MarkdownFieldType\Tests\TextParser;
 
 use cebe\markdown\Markdown;
 use cebe\markdown\Parser as Engine;
-use EzSystems\MarkdownFieldTypeBundle\TextParser\MarkdownParser;
+use EzSystems\MarkdownFieldType\TextParser\MarkdownParser;
 
 class MarkdownParserTest extends \PHPUnit_Framework_TestCase
 {

@@ -4,9 +4,9 @@
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
 
-namespace EzSystems\MarkdownFieldTypeBundle\Twig;
+namespace EzSystems\MarkdownFieldTypeBundle\Templating\Twig\Extension;
 
-use EzSystems\MarkdownFieldTypeBundle\TextParser\MarkdownParser;
+use EzSystems\MarkdownFieldType\TextParser\MarkdownParser;
 
 /**
  * Adds Markdown filter to Twig which transforms supplied markdown syntax to HTML

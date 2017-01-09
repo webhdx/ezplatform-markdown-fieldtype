@@ -1,11 +1,11 @@
 parameters:
-    ezpublish.fieldtype.ezmarkdown.class: EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\Type
-    ezpublish.fieldtype.indexable.ezmarkdown.class: EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\SearchField
-    ezpublish.fieldtype.ezmarkdown.legacy_converter.class: EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\LegacyConverter
-    ezpublish.fieldtype.ezmarkdown.form_mapper.class: EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\FormMapper
-    ezpublish.markdown.parser.class: EzSystems\MarkdownFieldTypeBundle\TextParser\MarkdownParser
+    ezpublish.fieldtype.ezmarkdown.class: EzSystems\MarkdownFieldType\FieldType\Markdown\Type
+    ezpublish.fieldtype.indexable.ezmarkdown.class: EzSystems\MarkdownFieldType\FieldType\Markdown\SearchField
+    ezpublish.fieldtype.ezmarkdown.legacy_converter.class: EzSystems\MarkdownFieldType\FieldType\Markdown\LegacyConverter
+    ezpublish.fieldtype.ezmarkdown.form_mapper.class: EzSystems\MarkdownFieldType\FieldType\Markdown\FormMapper
+    ezpublish.markdown.parser.class: EzSystems\MarkdownFieldType\TextParser\MarkdownParser
     ezpublish.markdown.engine.class: cebe\markdown\GithubMarkdown
-    ezpublish.markdown.twig_extension.class: EzSystems\MarkdownFieldTypeBundle\Twig\MarkdownExtension
+    ezpublish.markdown.twig_extension.class: EzSystems\MarkdownFieldTypeBundle\Templating\Twig\Extension\MarkdownExtension
 
 services:
     ezpublish.fieldtype.ezmarkdown:

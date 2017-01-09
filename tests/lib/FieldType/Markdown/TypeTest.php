@@ -4,10 +4,10 @@
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
 
-namespace EzSystems\MarkdownFieldTypeBundle\Tests\FieldType\Markdown;
+namespace EzSystems\MarkdownFieldType\Tests\FieldType\Markdown;
 
-use EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\Type;
-use EzSystems\MarkdownFieldTypeBundle\FieldType\Markdown\Value;
+use EzSystems\MarkdownFieldType\FieldType\Markdown\Type;
+use EzSystems\MarkdownFieldType\FieldType\Markdown\Value;
 
 class TypeTest extends \PHPUnit_Framework_TestCase
 {
