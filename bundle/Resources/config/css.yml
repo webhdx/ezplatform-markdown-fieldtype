@@ -2,4 +2,5 @@ system:
     default:
         css:
             files:
-                - 'bundles/ezsystemsmarkdownfieldtype/css/views/fields/edit/markdown.css'
+                - 'bundles/ezsystemsmarkdownfieldtype/css/layouts/views/fields/edit/markdown.css'
+                - 'bundles/ezsystemsmarkdownfieldtype/css/themes/views/fields/edit/markdown.css'

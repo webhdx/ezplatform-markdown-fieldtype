@@ -2,12 +2,31 @@ system:
     default:
         yui:
             modules:
-                ez-contenteditformview:
+                showdown:
+                    path: %ez_platformui.fieldtype.markdown.public_dir%/js/vendors/showdown/showdown.js
+                md-showdown:
+                    requires: ['showdown']
+                    path: %ez_platformui.fieldtype.markdown.public_dir%/js/external/md-showdown.js
+                md-markdown-view:
                     requires:
-                        - 'ez-markdown-editview'
-                ez-markdown-editview:
-                    requires: ['ez-fieldeditview', 'event-valuechange', 'markdowneditview-ez-template', 'ez-translator']
-                    path: "%ez_platformui.fieldtype.markdown.public_dir%/js/views/fields/ez-markdown-editview.js"
-                markdowneditview-ez-template:
+                        - 'ez-fieldview'
+                        - 'ez-translator'
+                        - 'md-showdown'
+                        - 'mdmarkdownview-ez-template'
+                    dependencyOf: ['ez-rawcontentview']
+                    path: %ez_platformui.fieldtype.markdown.public_dir%/js/views/fields/md-markdown-view.js
+                mdmarkdownview-ez-template:
                     type: 'template'
-                    path: "%ez_platformui.fieldtype.markdown.public_dir%/templates/fields/edit/markdown.hbt"
+                    path: %ez_platformui.fieldtype.markdown.public_dir%/templates/fields/view/markdown.hbt
+                md-markdown-editview:
+                    requires:
+                        - 'ez-fieldeditview'
+                        - 'ez-translator'
+                        - 'md-showdown'
+                        - 'event-valuechange'
+                        - 'mdmarkdowneditview-ez-template'
+                    dependencyOf: ['ez-contenteditformview']
+                    path: %ez_platformui.fieldtype.markdown.public_dir%/js/views/fields/md-markdown-editview.js
+                mdmarkdowneditview-ez-template:
+                    type: 'template'
+                    path: %ez_platformui.fieldtype.markdown.public_dir%/templates/fields/edit/markdown.hbt
