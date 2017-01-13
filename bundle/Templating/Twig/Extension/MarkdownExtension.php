@@ -13,18 +13,28 @@ use EzSystems\MarkdownFieldType\TextParser\MarkdownParser;
  */
 class MarkdownExtension extends \Twig_Extension
 {
-    /** @var MarkdownParser $parser Parser used to transform markdown text into HTML */
+    /**
+     * @var MarkdownParser $parser Parser used to transform markdown text into HTML
+     */
     protected $parser;
 
+    /**
+     * MarkdownExtension constructor
+     *
+     * @param MarkdownParser $parser
+     */
     public function __construct(MarkdownParser $parser)
     {
         $this->parser = $parser;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getFilters()
     {
         return array(
-            new \Twig_SimpleFilter('markdown', array($this, 'parseMarkdownToHtml')),
+            new \Twig_SimpleFilter('markdown_to_html', array($this, 'parseMarkdownToHtml')),
         );
     }
 

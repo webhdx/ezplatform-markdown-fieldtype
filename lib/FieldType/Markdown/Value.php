@@ -9,9 +9,7 @@ namespace EzSystems\MarkdownFieldType\FieldType\Markdown;
 use eZ\Publish\Core\FieldType\TextBlock\Value as TextBlockValue;
 
 /**
- * Value for Markdown field type.
- *
- * NOTE: Inherits TextBlockValue as there are no differences in data representation (plain text).
+ * Value for Markdown field type
  */
 class Value extends TextBlockValue
 {

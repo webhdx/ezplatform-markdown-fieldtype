@@ -1,8 +1,8 @@
 parameters:
     ezpublish.fieldtype.ezmarkdown.class: EzSystems\MarkdownFieldType\FieldType\Markdown\Type
-    ezpublish.fieldtype.indexable.ezmarkdown.class: EzSystems\MarkdownFieldType\FieldType\Markdown\SearchField
-    ezpublish.fieldtype.ezmarkdown.legacy_converter.class: EzSystems\MarkdownFieldType\FieldType\Markdown\LegacyConverter
-    ezpublish.fieldtype.ezmarkdown.form_mapper.class: EzSystems\MarkdownFieldType\FieldType\Markdown\FormMapper
+    ezpublish.fieldtype.indexable.ezmarkdown.class: eZ\Publish\Core\FieldType\TextBlock\SearchField
+    ezpublish.fieldtype.ezmarkdown.legacy_converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\TextBlockConverter
+    ezpublish.fieldtype.ezmarkdown.form_mapper.class: EzSystems\RepositoryForms\FieldType\Mapper\TextBlockFormMapper
     ezpublish.markdown.parser.class: EzSystems\MarkdownFieldType\TextParser\MarkdownParser
     ezpublish.markdown.engine.class: cebe\markdown\GithubMarkdown
     ezpublish.markdown.twig_extension.class: EzSystems\MarkdownFieldTypeBundle\Templating\Twig\Extension\MarkdownExtension

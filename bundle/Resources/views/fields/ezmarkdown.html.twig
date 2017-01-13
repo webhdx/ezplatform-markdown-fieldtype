@@ -2,7 +2,7 @@
 
 {% block ezmarkdown_field %}
     {% spaceless %}
-        {% set field_value = field.value|markdown %}
+        {% set field_value = field.value|markdown_to_html %}
         {{ block( 'simple_block_field' ) }}
     {% endspaceless %}
 {% endblock %}

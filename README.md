@@ -4,7 +4,7 @@ Adds new fieldtype to eZ Platform, which allows to write using Markdown syntax. 
 
 ## Installation
 
-It isn't available in composer repository yet. Installation steps for now:
+Package is not available in composer repository yet. Installation steps for now are:
 
 1. Add in `composer.json`:
 ```

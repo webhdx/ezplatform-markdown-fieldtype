@@ -6,8 +6,8 @@
 
 namespace EzSystems\MarkdownFieldType\Tests\FieldType\Markdown;
 
+use eZ\Publish\Core\FieldType\TextBlock\Value;
 use EzSystems\MarkdownFieldType\FieldType\Markdown\Type;
-use EzSystems\MarkdownFieldType\FieldType\Markdown\Value;
 
 class TypeTest extends \PHPUnit_Framework_TestCase
 {

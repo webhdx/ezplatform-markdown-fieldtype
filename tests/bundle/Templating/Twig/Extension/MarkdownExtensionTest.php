@@ -38,4 +38,14 @@ class MarkdownExtensionTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals("<p><strong>markdown syntax test</strong></p>\n", $parsedText);
     }
+
+    public function testGetFilters()
+    {
+        $extension = new MarkdownExtension($this->parser);
+        $filters = $extension->getFilters();
+
+        $this->assertCount(1, $filters);
+        $this->assertContainsOnlyInstancesOf(\Twig_Filter::class, $filters);
+        $this->assertEquals('markdown_to_html', $filters[0]->getName(), 'markdown_to_html');
+    }
 }
