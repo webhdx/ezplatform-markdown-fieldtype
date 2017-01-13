@@ -8,15 +8,15 @@
         </label>
     </div>
     <div class="pure-u ez-editfield-input-area ez-default-error-style">
-        <div class="ez-editfield-input">
-            <div class="ez-markdown-input-ui">
+        <div class="ez-editfield-input md-markdown__container">
             <textarea
-                    class="ez-validated-input"
-                    id="ez-field-{{ content.contentId }}-{{ fieldDefinition.identifier }}"
-                    rows="{{ fieldDefinition.fieldSettings.textRows }}"
+                class="ez-validated-input md-markdown__input"
+                id="ez-field-{{ content.contentId }}-{{ fieldDefinition.identifier }}"
+                rows="{{ fieldDefinition.fieldSettings.textRows }}"
                 {{#if isRequired}} required{{/if}}>
-                {{ field.fieldValue }}</textarea>
-            </div>
+                    {{ field.fieldValue }}
+            </textarea>
+            <div class="md-markdown__preview"></div>
         </div>
         {{> ez_fielddescription_tooltip }}
     </div>
